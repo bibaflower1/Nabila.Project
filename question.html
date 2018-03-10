@@ -1,0 +1,118 @@
+<DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript"></script>
+</head>
+
+<body>
+<button><a href="index.html">Home page</a><br></button><br><br>
+<button><a target="_blank" href="javascript.html">JavaScript page</a><br></button>
+	<div class="container">
+		<div class="question">
+			<span>Quiz Question</span>
+			<p>
+				 Inside which HTML element do we put the JavaScript? ?
+			</p>
+		</div>
+
+		<div class="answers">
+			<ul id="list">
+				<li>
+					<label for="option1">
+						<input type="radio" value="1" id="option1" name="options">
+						script
+					</label>
+				</li>
+				<li>
+					<label for="option2">
+						<input type="radio" value="2" id="option2" name="options">
+						javascript
+					</label>
+				</li>
+				<li>
+					<label for="option3">
+						<input type="radio" value="3" id="option4" name="options">
+						js
+					</label>
+				</li>
+				<li>
+					<label for="option4">
+						<input type="radio" value="4" id="option4" name="options">
+						scripting
+					</label>
+				</li>
+			</ul>
+			
+		</div>
+		
+	</div>
+	<button class="submit" id="submit-disabled" disabled>submit</button>
+
+	<div id="overlay">
+		<div class="modal-content">
+			<div id="modal-elements">Thanks for completing that</div>
+		</div>
+	</div>
+
+<!-- code java -->
+	<script>
+	
+	var button = document.querySelector(".submit");
+	var ul = document.getElementById('list');
+	
+	ul.addEventListener('click',function(){
+		button.disabled = false;
+     	button.setAttribute('id', 'submit-enabled');
+	});
+	
+	
+	var options = document.querySelectorAll("input[type=radio]");
+	var li = document.getElementsByTagName("li");
+	var modal = document.getElementById("overlay");
+	var modaElements = document.getElementById('modal-elements'); 
+	var correctAnswer = 0;
+	
+	button.addEventListener('click',function(){
+		
+		if(options[correctAnswer].checked){
+		
+			li[correctAnswer].classList.add("correct");
+			
+			modaElements.style.background = "url(images/well.png) no-repeat center top"; 
+			
+			modaElements.style.color = "#02ccba";
+			modaElements.textContent= "Thanks for completing that!";
+			
+			modal.style.display = "block";
+			
+			
+		}
+		else{
+			
+			modaElements.style.background = "url(images/try.png) no-repeat center top"; 
+			
+			modaElements.style.color = "#f65d44";
+			modaElements.textContent= "Try Again!";
+			
+			modal.style.display = "block";
+		}
+		
+		
+		
+	});
+
+	window.addEventListener('click',function(){
+		
+	if (event.target == modal) {
+
+		modal.style.display = "none"; 
+
+	}
+	
+});
+		
+	
+</script>
+</body>
+</html>

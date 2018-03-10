@@ -1,0 +1,60 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Login and register design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body>
+	<h1>Welcome to JavaSript Tutorial</h1>
+	<div class="login-page">
+		<div class="form">
+			<form class="register-form">
+				<input type="text" placeholder="User name"/>
+				<input type="text" placeholder="Password"/>
+				<input type="text" placeholder="E-mail"/>
+				<button>Create</button>
+				<p class="message">Already registered ? <a href="#">Login</a></p>
+			</form>
+			<form class="login-form"></form>
+				<input type="text" placeholder="user name"/>
+				<input type="password" placeholder="password">
+				<button>Login</button>
+				<p class="message">Not registred ? <a href="#">Register</p>
+			</form>
+		</div>
+	</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a target="_blank" href="https://www.facebook.com/rose.amira.7370">facebook</a>
+  <a target="_blank" href="https://twitter.com/PrincesNabila11">twitter</a>
+  <a target="_blank" href="javascript.html">JavaScript</a>
+  <a target="_blank" href="question.html">Quiz</a>
+  <span style="font-size:50px;cursor:pointer" onclick="openNav()" id="open">&#9776;</span>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'> </script>
+<script>
+
+	$('.message a').click(function(){
+		$('form').animate({height:"toggle",opacity:"toggle"},"slow");
+	
+	});
+
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("open").style.background = "#e0e0d1";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>

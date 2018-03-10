@@ -1,0 +1,132 @@
+body
+{
+font-family: arial;
+color: #333;
+background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url(images/image.png);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.container
+{
+	max-width: 600px;
+	height: 400px;
+	margin: 80px auto 0;
+	/*box-shadow: 0px 0px 5px #999;*/
+	background-color: white;
+	box-shadow: 1px 1px 1px 0px blue, 20px 20px 20px 20px grey;
+}
+.question
+{
+	padding: 30px;
+	letter-spacing: 0.5px;
+	font-size: 16px;
+	border-bottom: 1px solid #dfdfdf;
+}
+.question span
+{
+	color: #7d97ad;
+	font-weight: 700;
+	font-size: 14px;
+}
+.answers ul 
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.answers li
+{
+	position: relative;
+	width: auto;
+	border-bottom: 1px solid #dfdfdf;
+}
+.answers li:last-child
+{
+	border-bottom: none;
+}
+.answers label
+{
+	display: inline-block;
+	width: 100%;
+	padding: 23px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.submit
+{
+	color: #fff;
+	border:none;
+	padding: 15px 45px;
+	border-radius: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+	outline: none;
+	display: block;
+	margin: 20px auto;
+}
+#submit-disabled
+{
+	background-color: #7d97ad;
+	opacity: 0.7;
+}
+#submit-enabled
+{
+	background-color: grey;
+	box-shadow: 12px 15px 20px rgba(0,0,0,.1);
+	cursor: pointer;
+	transition: all 0.5s;
+}
+#submit-enabled:hover
+{
+	background-color: blue;
+	box-shadow: none;
+}
+.correct
+{
+	box-shadow: 0px 0px 0px 1px #15c26b inset;
+}
+.correct label::before{
+	content: "";
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+   	top: 18px;
+   	width: 30px;
+    height: 30px;
+	background: #fff url(https://classroom.udacity.com/images/answer-correct-d7c4d.svg);
+	background-size: contain;
+	z-index: 10;
+}	
+#overlay
+{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(46,60,73,.7);
+	z-index: 100;
+	transition: all 0.5s;
+}
+.modal-content
+{
+	width: 400px;
+	height: 210px;
+	background: #fff;
+	border-radius: 8px;
+	margin: 80px auto;
+	padding: 20px;
+	z-index: 101;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+#modal-elements
+{
+	width: 150px;
+    margin: 0 auto;
+	text-align: center;
+   	font-size: 16px;
+   	font-weight: 600;
+	margin-top: 10px;
+	padding-top: 160px;
+}
